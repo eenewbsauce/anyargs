@@ -1,6 +1,6 @@
 {
   "name": "anyargs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small utility module that converts function arguments to an object for use within the function based on a supplied metadata object. This allows parameters to be passed in any order, making the resultant function very flexible.",
   "main": "index.js",
   "scripts": {
