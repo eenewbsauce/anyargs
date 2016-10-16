@@ -27,7 +27,7 @@ Add anyargs to your function
 - anyargs does not support multiple keys having the same type in the metadata object.
 
 ```javascript
-let anyArgs = require('anyargs').parse;
+let anyArgs = require('anyargs');
 
 function add(one, two, cb) {
   let metadata = {
