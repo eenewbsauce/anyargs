@@ -1,0 +1,34 @@
+{
+  "name": "anyargs",
+  "version": "1.0.0",
+  "description": "A small utility module that converts function arguments to an object for use within the function based on a supplied metadata object. This allows parameters to be passed in any order, making the resultant function very flexible.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive tests/**/*.js",
+    "test-watch": "mocha --watch --recursive tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eenewbsauce/anyargs.git"
+  },
+  "keywords": [
+    "default",
+    "values",
+    "function",
+    "signature",
+    "flexibility",
+    "type",
+    "safety"
+  ],
+  "author": "eenewbsauce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eenewbsauce/anyargs/issues"
+  },
+  "homepage": "https://github.com/eenewbsauce/anyargs#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6"
+  }
+}
