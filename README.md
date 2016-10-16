@@ -10,6 +10,8 @@ A small utility module that converts function arguments to an object for use wit
 ## Usage
 Add anyargs to your function
 
+- anyargs does not support multiple keys having the same type in the metadata object.
+
 ```javascript
 let anyArgs = require('anyargs').parse;
 
@@ -20,7 +22,7 @@ function add(one, two, cb) {
       required: true
     },
     two: {
-      type: 'number',
+      type: 'string',
       required: true
     },
     cb: {
@@ -33,7 +35,7 @@ function add(one, two, cb) {
   let args = anyArgs(arguments, metadata);
 
   return new Promise((resolve, reject) => {
-    let sum = args.one + args.two;
+    let sum = args.one + parseInt(args.two);
     resolve(sum);
     cb(sum);
   });
