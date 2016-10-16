@@ -1,6 +1,14 @@
 # AnyArgs
 A small utility module that converts function arguments to an object for use within the function based on a supplied metadata object. This allows parameters to be passed in any order, making the resultant function very flexible.
 
+## NPM
+
+Official home on NPM: [https://www.npmjs.com/package/anyargs](https://www.npmjs.com/package/anyargs)
+
+## Github
+
+Official home on Github: [https://github.com/eenewbsauce/anyargs](https://github.com/eenewbsauce/anyargs)
+
 ## Setup
 
 - Install the module
@@ -37,7 +45,7 @@ function add(one, two, cb) {
   return new Promise((resolve, reject) => {
     let sum = args.one + parseInt(args.two);
     resolve(sum);
-    cb(sum);
+    args.cb(sum);
   });
 }
 ```
