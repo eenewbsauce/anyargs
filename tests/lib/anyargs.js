@@ -22,6 +22,10 @@ function add(one, two, cb) {
       type: 'function',
       required: false,
       defaultValue: function() {}
+    },
+    params: {
+      type: 'object',
+      required: false
     }
   };
 
@@ -38,11 +42,12 @@ describe('anyargs ::', () => {
   });
 
   it('should return object with keys matching the metadata', () => {
-    let args = add(1,'two',function(sum) {});
+    let args = add(1,'two',function(sum) {}, {});
 
     expect(args.one).to.equal(1)
     expect(args.two).to.equal('two')
     expect(args.cb).to.be.a('function')
+    expect(args.params).to.be.an('object')
   });
 
   it('should return object with keys matching the metadata even when passed out of order', () => {
